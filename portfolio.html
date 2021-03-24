@@ -1,0 +1,330 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cutive+Mono&family=Josefin+Slab&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+
+<style type="text/css">
+
+	html {
+	  scroll-behavior: smooth;
+	}
+
+	body{
+		margin: 0;
+		font-family: 'Antic Slab', serif;
+	}
+
+	#logo{
+		display: block;
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		background: url(https://image.shutterstock.com/image-vector/rt-initial-monogram-logo-260nw-343549202.jpg) center center;
+		background-size: 120px 120px;
+		
+	}
+
+	header{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #fff;
+		z-index: 1;
+		width: 100%;
+	}
+
+	#navbar{		
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 6vw;
+		min-height: 80px; 
+		width: 80%;
+		margin: auto;
+	}
+
+	#navbar ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		display: inline;
+	}
+
+	#navbar ul li{
+		float: left;
+		padding-left: 5vw;
+	}
+
+	#navbar ul li a{
+		font-family: 'Cutive Mono', monospace;
+		font-size: 20px;
+		font-weight: 700;
+		text-decoration: none;
+		color: #555;
+	}
+
+	#main {		
+		margin: 80px auto auto auto;
+		width:100vw;
+	}
+
+	#welcome-section h1{
+		font-family: 'Cutive Mono', monospace;
+		font-size: 5em;
+		font-weight: 600;
+		color: #f0fff0;
+		text-shadow: 0px 0px 3px #f00;
+	}
+
+	.backgr, .pre-portfolio, #projects, #about, #contact, footer, .project-tile{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: auto;
+		text-align: center;
+	}
+
+	#welcome-section{
+		 
+		height: 100vh !important;
+		width: 100%;
+    
+		background: url('https://i.pinimg.com/originals/d4/78/eb/d478ebc602834a5466fe3ef2cdb9feb6.jpg') no-repeat fixed center;
+	}
+
+	.backgr{
+		background-color: #21172b8a;
+		color: #eee;		
+		height: 100vh !important;
+    min-height: 720px; 
+	}
+
+
+	#projects{
+		padding: 10vw 0px;
+	}
+	
+	h1, h2, h3, h4, h5{
+		font-weight: 100;
+		font-size: 40px;
+		margin-bottom: 0px;
+		font-family: 'Josefin Slab', serif;
+		text-shadow: 0px 0px 2px #000;
+	}
+
+	p{
+		font-size: 22px;
+		padding: 0px 20%;
+
+	}
+	.project-frame{
+		padding: 50vw;
+	}
+
+	section a{
+		color: orange;
+		border: 1px solid orange;
+		text-decoration: none;
+		font-size: 18px;
+		width: 20%;
+		border-radius: 3px;
+		background-color: rgb(54 49 60);
+		text-transform: uppercase;
+		padding: 0.5% 2%;
+		margin: 0px 2%;
+	}
+
+	section a:hover{
+		color: #e2001a;
+		border: 1px solid rgb(54 49 60);
+		
+	}
+
+	.project-title{
+		border-bottom: 1px solid #fff;
+	}
+
+	.project-title:hover{
+		border-bottom: 1px solid #333;
+
+	}
+
+	hr{
+		width: 50%;
+	}
+
+	.text{
+		color: rgb(38 26 54);
+		background-color: #d9d1e3;
+		padding: 5vw 0px;
+		width: 100%;
+
+	}
+
+	#about .text{
+		color: rgb(251 207 195);
+	    background-color: #491f00;
+	}
+
+	footer{
+		background-color: #252525;
+		padding: 10vw 0;
+		color: orange;
+	}
+
+	img{
+		display: block;
+		width: 80%;
+
+	}
+
+	.links{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	@media only screen and (max-width: 768px) {
+		#navbar ul li a{ font-size: 15px; }
+		#welcome-section h1{ font-size: 3em;}
+
+		#projects{ padding: 5vw 0px;}
+		h1, h2, h3, h4, h5{	font-size: 30px;}
+		p{ font-size: 18px;	padding: 0px 20%;}
+
+		section a{
+		font-size: 15px;}	
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+<body>
+	<header>
+		<nav id="navbar">
+			<div id="logo"></div>
+			<ul>
+				<li><a href="#projects">PORTFOLIO</a></li>
+				<li><a href="#about">ABOUT</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+
+	<main id="main">
+		<section id="welcome-section">
+			<div class="backgr">
+				<h1>Rahul Tadola</h1>
+				<p>I'm a Indian Republic based web designer & front‑end developer focused on crafting clean  & user‑friendly experiences.</p>
+				<a href="#projects">Check My Work</a>
+			</div>
+
+				
+		</section>
+		
+		<section class="pre-portfolio text-section">
+			<div class="text">
+				<h1>PORTFOLIO</h1>
+				<p>Below you can see some projects I've been working on lately. I divide each project into four follow-up areas: comprehensive research, wireframing, design & development. This process allows me to create great product with client goals in mind.</p>
+			</div>
+		</section>
+
+
+
+		<section id="projects">
+			
+			<div class="project-tile">
+				<h3 class="project-title">Danfil Kids Jewellery</h3>
+				<p>Client wanted online configurator, where customers can create custom kids jewellery. I was responsible for UI design, interaction design & front-end development.</p>
+				<a href="to_project">SEE IT ONLINE</a>
+				<img src="http://www.pavelhuza.com/images/portfolio/cutie-jewellery-large.jpg" alt="Danfil Kids Jewellery">
+			</div>
+
+				<hr>
+			
+		
+			<div class="project-tile">
+				<h3 class="project-title">Restu Mobile Site</h3>
+				<p>For czech startup Restu.cz I created mobile version of their site. I was responsible for UI design, interactions & front-end development.</p>
+				<a href="to_project">ONLINE SOON</a>
+				<img src="http://www.pavelhuza.com/images/portfolio/restu-mobile-large.jpg" alt="Restu Mobile Site">
+			</div>
+			
+				<hr>
+
+			<div class="project-tile">
+				<h3 class="project-title">Mujjo Accesories</h3>
+				<p>Fun side project, where I designed simple shopping experience for one of my favourite apple accessory.</p>
+				<a href="to_project">ONLINE SOON</a>
+				<img src="http://www.pavelhuza.com/images/portfolio/mujjo-large.jpg" alt="Danfil Kids Jewellery">
+			</div>		
+
+			
+		</section>
+
+
+		<section id="about" class="text-section">
+			<div class="text">
+				<h1>ABOUT ME</h1>
+				<p>I'm web designer & front-end developer. I'm interested in all kinds of visual communication, but my major focus is on designing web, mobile & tablet interfaces.</p>
+			</div>
+		</section>
+
+
+		<section id="contact" class="text-section">
+			
+			<div class="text">
+				<h1>OK, LET'S CREATE SOMETHING GREAT</h1>
+
+				<p>If you like my work and have some cool project to work on, just send me direct message or contact me through social sites listed below.</p>
+				<div class="links">
+					<a id="profile-link" target="_blank" href="https://github.com/Rahultadola/">GET IN TOUCH</a>
+					<a href="mailto:rahultadola@gmail.com">Mail</a>
+				</div>
+				
+			</div>
+
+		</section>
+
+	</main>
+	<footer >
+		<p>© 2021 RAHUL TADOLA . INDIAN TERITARY</p>
+		<p>This site was built just for design purpose. Projects used in portfolio are from http://www.pavelhuza.com/ </p>
+	</footer>
+
+
+
+
+
+
+
+</body>
+</html>
